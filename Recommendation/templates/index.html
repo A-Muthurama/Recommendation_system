@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommendation System</h1>
+        <form action="/recommend" method="post">
+            <label for="movie_id">Enter Movie ID:</label>
+            <input type="number" id="movie_id" name="movie_id" required>
+            
+            <label for="top_n">Number of Recommendations:</label>
+            <input type="number" id="top_n" name="top_n" value="5" min="1" max="20">
+            
+            <button type="submit">Get Recommendations</button>
+        </form>
+    </div>
+</body>
+</html>

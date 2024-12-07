@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recommendations for Movie ID: {{ movie_id }}</h1>
+        <ul>
+            {% for rec in recommendations %}
+                <li>
+                    <strong>{{ rec.title }}</strong> (Genre: {{ rec.genre }})
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
